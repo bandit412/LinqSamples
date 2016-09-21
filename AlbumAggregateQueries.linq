@@ -34,9 +34,9 @@ where x.Tracks.Count() == 0
 select new {
 	Title = x.Title,
 	NumberOfTracks = 0,
-	TotalTrackPrice = 0,
+	TotalTrackPrice = 0.00m,
 	AverageTrackLengthInSecondsA = 0.00d,
 	// the line below uses an Expression
-	//AverageTrackLengthInSecondsB = 0
+	//AverageTrackLengthInSecondsB = 0.00d
 }
 )
