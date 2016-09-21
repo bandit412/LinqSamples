@@ -24,7 +24,7 @@ select new {
 	TotalTrackPrice = x.Tracks.Sum(y => y.UnitPrice),
 	AverageTrackLengthInSecondsA = (x.Tracks.Average(y => y.Milliseconds)/1000),
 	// the line below uses an Expression
-	AverageTrackLengthInSecondsB = (x.Tracks.Average(y => y.Milliseconds/1000))
+	//AverageTrackLengthInSecondsB = (x.Tracks.Average(y => y.Milliseconds/1000))
 }
 ).Union(
 from x in Albums
@@ -35,8 +35,8 @@ select new {
 	Title = x.Title,
 	NumberOfTracks = 0,
 	TotalTrackPrice = 0,
-	AverageTrackLengthInSecondsA = 0,
+	AverageTrackLengthInSecondsA = 0.00d,
 	// the line below uses an Expression
-	AverageTrackLengthInSecondsB = 0
+	//AverageTrackLengthInSecondsB = 0
 }
 )
